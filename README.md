@@ -1,4 +1,4 @@
-# blepy
+# ble-probe
 
 Small [bleak](https://github.com/hbldh/bleak) scripts for poking at Bluetooth LE devices. Used to check the Klipsch The Fives protocol for [KlipschControl](https://github.com/andriyor/KlipschControl): which characteristics exist and which bytes change when you turn the knob or use the remote.
 

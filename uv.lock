@@ -16,6 +16,18 @@ wheels = [
 ]
 
 [[package]]
+name = "ble-probe"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "bleak", version = "1.1.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "bleak", version = "3.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "bleak", specifier = ">=1.1.1" }]
+
+[[package]]
 name = "bleak"
 version = "1.1.1"
 source = { registry = "https://pypi.org/simple" }
@@ -71,18 +83,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/87/9f/dd19d92309e4a3782
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d2/9c/839e4ff0393070396c656fa6616d0d2512f60b571c1263183e709db1c365/bleak-3.0.1-py3-none-any.whl", hash = "sha256:49f93f24ce96610529842da2d9856e7f46597e25966c0f1cfc737f0191566de6", size = 144735, upload-time = "2026-03-25T15:43:00.285Z" },
 ]
-
-[[package]]
-name = "blepy"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "bleak", version = "1.1.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "bleak", version = "3.0.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.10'" },
-]
-
-[package.metadata]
-requires-dist = [{ name = "bleak", specifier = ">=1.1.1" }]
 
 [[package]]
 name = "dbus-fast"
